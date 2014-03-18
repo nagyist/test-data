@@ -1,0 +1,41 @@
+==============================================================================
+ 		Instructions on how to import 
+	   Laputa test data into Open Foris Calc
+==============================================================================
+
+1. Import collect backup (collect-backup.zip)
+
+2. Import areas of interest (calc-aois.csv)
+
+3. Define sampling design
+	3.1 select sampling unit : plot
+	3.2 select systematic
+	3.3 select 2 phases
+		3.3.1 upload phase 1 plots (calc-phase1-plots.csv)
+		3.3.2 define join columns ( cluster <--> cluster_id , plot <--> plot_no )
+	3.4 select stratified 
+		3.4.1 upload strata (calc-strata.csv)
+		3.4.2 define stratum column (stratum)
+	3.5 select cluster
+		3.5.1 define cluster column (cluster)
+	3.6 select area of interest column join : aoi_code
+	3.7 define plot weight script :
+		plot$weight = ifelse ( is.na ( plot$subplot  ) | plot$subplot == 'A' , 1 , 0 )
+	
+4. Define aggregation script
+	4.1 select tree
+	4.2 define tree plot area script :
+		tree$plot_radius <- with(tree,  
+                        	ifelse(dbh < 5, 1,   	 
+                                      	ifelse(dbh < 10, 5,
+                                             	ifelse(dbh < 20, 10, 15)
+                                      	)                               	
+                        	)
+		  );
+
+		tree$plot_area <- with(tree,  pi * plot_radius^2 * share / 100);
+		#convert plot area factor from m2 to ha
+		tree$plot_area <- tree$plot_area * 0.0001;
+
+5. Add your own calculation steps.
+	(e.g. tree$cnt <- 1 ; )	
