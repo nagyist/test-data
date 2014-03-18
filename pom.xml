@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openforis.test-data</groupId>
+	<artifactId>test-data</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<distributionManagement>
+		<repository>
+			<id>openforis-releases</id>
+			<name>Open Foris Releases</name>
+			<url>http://www.openforis.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>openforis-snapshots</id>
+			<name>Open Foris Snapshots</name>
+			<url>http://www.openforis.org/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>openforis-releases</id>
+			<name>Open Foris Releases</name>
+			<url>http://www.openforis.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>openforis-snapshots</id>
+			<name>Open Foris Snapshots</name>
+			<url>http://www.openforis.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+  
+	<scm>
+		<connection>scm:git:git@github.com:openforis/test-data.git</connection>
+		<url>scm:git:git@github.com:openforis/test-data.git</url>
+		<developerConnection>scm:git:git@github.com:openforis/test-data.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+</project>
