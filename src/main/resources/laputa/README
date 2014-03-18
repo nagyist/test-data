@@ -39,3 +39,29 @@
 
 5. Add your own calculation steps.
 	(e.g. tree$cnt <- 1 ; )	
+
+==================================
+	Calculation step samples
+==================================
+
+====
+1. output variable est_height
+====
+sample_trees <- tree[  !is.na( tree$total_height ) , ]
+sample_trees <- sample_trees[ sample_trees$total_height > 0 , ];
+ 
+height_model <- with( sample_trees, lm(total_height ~ dbh  + I(dbh ^2) + I(dbh ^3)) );
+ 
+tree$est_height <- predict( height_model, newdata = tree[  , c('dbh','total_height')]  );
+ 
+tree$est_height <- ifelse(  is.na(tree$total_height),  tree$est_height,  tree$total_height) ;
+
+
+====
+2. output variable volume
+====
+tree$volume  =  0.5 * pi * (0.01 * tree$dbh / 2)^2 * tree$est_height
+
+
+
+
