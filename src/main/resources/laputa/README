@@ -3,18 +3,18 @@
 	   Laputa test data into Open Foris Calc
 ==============================================================================
 
-1. Import collect backup (collect-backup.zip)
+1. Import collect backup (collect-backup-laputa.zip)
 
-2. Import areas of interest (calc-aois.csv)
+2. Import areas of interest (calc/calc-aois.csv)
 
 3. Define sampling design
 	3.1 select sampling unit : plot
 	3.2 select systematic
 	3.3 select 2 phases
-		3.3.1 upload phase 1 plots (calc-phase1-plots.csv)
+		3.3.1 upload phase 1 plots (calc/calc-phase1-plots.csv)
 		3.3.2 define join columns ( cluster <--> cluster_id , plot <--> plot_no )
 	3.4 select stratified 
-		3.4.1 upload strata (calc-strata.csv)
+		3.4.1 upload strata (calc/calc-strata.csv)
 		3.4.2 define stratum column (stratum)
 	3.5 select cluster
 		3.5.1 define cluster column (cluster)
