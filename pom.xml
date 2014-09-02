@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openforis.test-data</groupId>
 	<artifactId>test-data</artifactId>
-	<version>1.6</version>
+	<version>1.7-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<properties>
@@ -42,7 +42,7 @@
 		<url>https://github.com/openforis/test-data</url>
 		<connection>scm:git:git@github.com:openforis/test-data.git</connection>
 		<developerConnection>scm:git:git@github.com:openforis/test-data.git</developerConnection>
-		<tag>test-data-1.6</tag>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<build>
