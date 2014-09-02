@@ -1,0 +1,7 @@
+code,equation,condition
+EUC/GRA,0.000065 * dbh^1.633 * h^1.137,
+PIN/PAT, 0.00002117 * dbh^1.8644 * h^1.3246,
+TCT/GRA,0.0001 * dbh^1.91 * h^0.75,
+DAL/MEL,0.00023 * dbh^2.231,
+,0.0001 * dbh^2.032 * h^0.66,round(as.numeric(vegetation_type)/100) == 2
+,0.5 * pi * (0.01 * dbh / 2)^2 * h,
